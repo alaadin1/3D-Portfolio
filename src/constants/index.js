@@ -35,6 +35,10 @@ import {
       title: "Work",
     },
     {
+      id: "project",
+      title: "Projects",
+    },
+    {
       id: "contact",
       title: "Contact",
     },
@@ -42,21 +46,23 @@ import {
   
   const services = [
     {
+      title: "Project Manager",
+      icon: creator,
+    },
+    
+    {
       title: "Web Developer",
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "React Developer",
       icon: mobile,
     },
     {
       title: "Backend Developer",
       icon: backend,
     },
-    {
-      title: "Content Creator",
-      icon: creator,
-    },
+    
   ];
   
   const technologies = [
