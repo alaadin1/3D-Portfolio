@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import { motion } from 'framer-motion'
 import 'react-vertical-timeline-component/style.min.css'
-import axios from 'axios'
+import { slideIn } from '../utils/motion'
 
 
 import { styles } from '../styles'
@@ -98,7 +98,7 @@ const Experience = () => {
         </VerticalTimeline>
       </div>
             
-      <motion.div variants= {textVariant()}
+      <motion.div variants={slideIn('left', 'tween', 0.2,1)}
       className='mt-16 flex justify-center items-center'>
         <button 
         onClick={()=>{downloadPDF(resumePDF_URL)}} 

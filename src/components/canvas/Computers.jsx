@@ -9,6 +9,10 @@ const Computers = () => {
   const computer = useGLTF('./desktop_pc/scene.gltf')
   const spaceship = useGLTF('./spaceship/scene.gltf')
   const man = useGLTF('./holograming_man/scene.gltf')
+
+ 
+
+
   return (
     <mesh>
       <hemisphereLight intensity={.85} groundColor="black" />
