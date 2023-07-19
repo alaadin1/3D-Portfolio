@@ -1,12 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import { motion } from 'framer-motion'
 import 'react-vertical-timeline-component/style.min.css'
+import axios from 'axios'
+
 
 import { styles } from '../styles'
 import { experiences } from '../constants'
 import { SectionWrapper } from '../hoc'
 import { textVariant } from '../utils/motion'
+import resume from '../assets/resume/Alaa_Agag_Resume_IV.pdf'
 
 
 const ExperienceCard = ({experience}) =>{
@@ -44,10 +47,38 @@ const ExperienceCard = ({experience}) =>{
     </ul>
 
   </VerticalTimelineElement>
+
+  
 }
 
 const Experience = () => {
+
+  const [loader, setLoader] = useState(false)
+  const [error, setError] = useState('')
+
+  const resumePDF_URL = 'http://127.0.0.1:5173/src/assets/resume/Alaa_Agag_Resume_IV.pdf'
+
+  const downloadPDF = (url) =>{
+    setLoader(true)
+    setError('')
+
+    fetch(url).then(response => response.blob()).then(blob =>{
+      const blobURL = window.URL.createObjectURL(new Blob([blob]))
+      const fileName = 'Alaa_Agag_Resume_IV.pdf'
+      const aTag = document.createElement('a')
+      aTag.href = blobURL
+      aTag.setAttribute('download', fileName)
+      document.body.appendChild(aTag)
+      aTag.click()
+      aTag.remove()
+    })
+    
+    setLoader(false)
+  }
+
   return (
+    
+
     <>
       <motion.div variants={textVariant()}>
       <p className={styles.sectionSubText}>
@@ -66,7 +97,19 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    
+            
+      <motion.div variants= {textVariant()}
+      className='mt-16 flex justify-center items-center'>
+        <button 
+        onClick={()=>{downloadPDF(resumePDF_URL)}} 
+        className='rounded-full bg-white text-tertiary  '>
+          <div className='m-3.5'>
+            Download Resume
+          </div>
+        </button>
+        {error !=='' && (<div> {error}</div>)}
+      </motion.div>
+      
     
 
 
