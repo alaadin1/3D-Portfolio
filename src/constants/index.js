@@ -23,6 +23,10 @@ import {
     jobit,
     tripguide,
     threejs,
+    python,
+    sql,
+    flask,
+    biosig
   } from "../assets";
   
   export const navLinks = [
@@ -79,16 +83,8 @@ import {
       icon: javascript,
     },
     {
-      name: "TypeScript",
-      icon: typescript,
-    },
-    {
       name: "React JS",
       icon: reactjs,
-    },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
     },
     {
       name: "Tailwind CSS",
@@ -103,35 +99,37 @@ import {
       icon: mongodb,
     },
     {
-      name: "Three JS",
-      icon: threejs,
+      name: "Python",
+      icon: python,
+    },
+    {
+      name: "Flask",
+      icon: flask,
+    },
+    {
+      name: "SQL",
+      icon: sql,
     },
     {
       name: "git",
       icon: git,
     },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
-    },
+
+
   ];
   
   const experiences = [
     {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
-      iconBg: "#383E56",
-      date: "March 2020 - April 2021",
+      title: "Project Coordinator",
+      company_name: "BioSig Technologies",
+      icon: biosig,
+      iconBg: "#E6DEDD",
+      date: "June 2018 - August 2019",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Worked alongside Director of Strategic Planning to improve project schedules, budgets, and project plans",
+        "Headed and executed weekly meetings with key stakeholders and vendors such as our contract manufacturer, resulting in production grade products arriving 2 months prior to agreed schedule",
+        "Managed and monitored project deliverables within approved timelines for over 11 project plans, some concurrent, ensuring all critical tasks were complete",
+        "Supported the prioritization of key product features by utilizing technical knowledge products",
       ],
     },
     {
@@ -174,6 +172,27 @@ import {
       ],
     },
   ];
+
+  const developerRoute = [
+    {
+      title: 'Started my programming journey',
+      date: "August 2020", 
+      description: 'Started learning pprogramming and '
+
+    },
+    {
+      title: 'N/A',
+      date: "June 2018 - August 2019", 
+      description: 'N/A'
+
+    },
+    {
+      title: 'N/A',
+      date: "June 2018 - August 2019", 
+      description: 'N/A'
+
+    },
+  ]
   
   const testimonials = [
     {
