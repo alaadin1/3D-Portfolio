@@ -62,16 +62,24 @@ const Experience = () => {
     setLoader(true)
     setError('')
 
-    fetch(url).then(response => response.blob()).then(blob =>{
-      const blobURL = window.URL.createObjectURL(new Blob([blob]))
-      const fileName = 'Alaa_Agag_Resume_IV.pdf'
-      const aTag = document.createElement('a')
-      aTag.href = blobURL
-      aTag.setAttribute('download', fileName)
-      document.body.appendChild(aTag)
-      aTag.click()
-      aTag.remove()
-    })
+    
+      fetch(url).then(response => response.blob())
+      .then(blob =>{
+        const blobURL = window.URL.createObjectURL(new Blob([blob]))
+        const fileName = 'Alaa_Agag_Resume_IV.pdf'
+        const aTag = document.createElement('a')
+        aTag.href = blobURL
+        aTag.setAttribute('download', fileName)
+        document.body.appendChild(aTag)
+        aTag.click()
+        aTag.remove()
+      })
+      .catch(error =>{
+        console.log(error)
+      })
+   
+    
+    
     
     setLoader(false)
   }
