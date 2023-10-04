@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     // <div className='flex items-end justify-center w-full h-screen text-center'>
     <section className='relative w-full h-screen mx-auto'>
-       <DotGrid /> 
+       {/* <DotGrid />  */}
       {/* { <video ref={videoRef} src ={video} autoPlay loop muted className='object-cover h-full w-full absolute -z-10'/> } */}
         <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7x1 mx-auto flex flex-row items-start gap-5 pointer-events-none `}>
   
@@ -35,7 +35,7 @@ const Hero = () => {
       </div>
 
       
-      {/* <ComputersCanvas /> */}
+      <ComputersCanvas />
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center '>
         <a href='#about'>
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
